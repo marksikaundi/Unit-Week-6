@@ -1,0 +1,104 @@
+string="arjun nimmy peter nishal rahul varsha sonu namitha sebastian minnu krishnapria"#string consisting of a long series of words
+
+print(string)
+
+list1=string.split()#converting string to list
+
+print(list1)
+
+list1.remove("arjun")#deleting from list
+
+print(list1)
+
+list1.pop(-1)#deleting from list
+
+print(list1)
+
+del list1[1]#deleting from list
+
+print(list1)
+
+list1.sort()#sorting the list
+
+print(list1)
+
+list1.append("meera")#inserting to list
+
+print(list1)
+
+list1.insert(5,"bhavana")#inserting to list
+
+print(list1)
+
+list1.extend(["reena"])#inserting to list
+
+print(list1)
+
+list2=" ".join(list1)#converting list to string
+
+print(list2)#printing the converted string
+
+
+
+
+
+
+#Part 2
+
+
+
+list1=["arjun","nimmy",["reena","minnu"]]#example of nested list
+
+print(list1)
+
+list2=["arjun"]*2# * operator usage
+
+print(list2)
+
+list3=list2[0:1]#slicing operator usage
+
+print(list3)
+
+list2+=["nimmy"]# += operator usage
+
+print(list2)
+
+list4=[True,True,False,False]
+
+list5=list(filter(None,list4))#usage of filter
+
+print(list5)
+
+list6=["arjun"]
+
+list6=list6.append("nimmy")#legal list operation but does the wrong thing, instead of adding "nimmy" to the list, it will produce result as None
+
+print(list6)
+
+
+# my_string = 'platypus cat rabbit fox elephant ant parrot monkey butterfly piranha pig turtle lemur penguin herring chicken marten bear marmot mouse horse'
+
+# '''String to list'''
+# my_list = my_string.split()
+
+# '''Delete elements'''
+# my_list.remove('cat')
+# my_list.pop(-1)
+# del my_list[1]
+
+# '''Sort list'''
+# my_list.sort()
+
+# '''Add elements'''
+# my_list.append('owl')
+# my_list.insert(5,'giraffe')
+# my_list.extend(['rhino', 'fly'])
+
+# '''List to string'''
+# final_string = ' '.join(my_list)
+# print(final_string)
+
+
+## Part 3
+# The feedback i recieve from my peers, i would say this is one self experience sometimes looks unfair all that but atimes its just fair depending with what one has been doing.
+# I believe whoever i have assessed their work, they been happy i always tries to be positive and try to show some interest in someones work, than let them down.
