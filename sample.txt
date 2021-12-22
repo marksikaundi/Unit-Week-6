@@ -1,0 +1,164 @@
+The object of a variable can be either a type or a value, and the value of a variable is the object assigned to it. The object type specifies the functions and values an object will accept and work with. "All data in a Python program is represented by objects or by relations between objects," according to the Python documentation (Downey A., 2015). When determining if two objects are equivalent, the "==" operator is used. The operator "is" in comparison compares two objects to check whether they are comparable. Both operators have a Boolean return value type, which means they either return True or False.
+
+Example. A Q/1,:
+
+1.# input,1:
+2. fruit_1 = ['apple', 'orange', 'strawberries']
+3. fruit_2 = ['apple', 'orange', 'strawberries']
+
+4. print(fruit_1 == fruit_2) # to check if the values are equivalent to each other. 
+5. print(fruit_2 is fruit_1) # to check the both object have the same value to each other.
+
+6. # output,1:
+7. *** Remote Interpreter Reinitialized ***
+8. True
+9. False
+EXPLANATIONS, for Example, A:
+
+Inside the 2nd and 3rd lines, both variables "fruit_1 and "fruit_2 is referred to as a string. Both refer to two different objects and yet have the same value.
+
+As you can see, within the 4th line, the values "fruit_1" and "fruit_2" have a similar value, which indicated that both elements are “Equivalent”, therefore when we are using the "==" operator, we got an expected result, which is "True".
+
+However, in the 5th line when we are trying to refer to both objects with the same value by using the "is" operator, it is printed as "False". Which indicated they are not similar or “Identical”. Both have similarities with the elements but they are not referring to the same object. You will see my reasoning as I go along with another example later on.
+
+Example. B, Q/1,
+
+# input,2:
+fruit_1 = ['apple', 'orange', 'strawberries']
+fruit_2 = ['apple', 'orange', 'strawberries']
+fruit_1 = fruit_2 
+
+print(fruit_1 == fruit_2)
+print(fruit_2 is fruit_1)
+
+#output, 2:
+*** Remote Interpreter Reinitialized ***
+True
+True
+EXPLANATIONS, for Example, B:
+
+As you can see from the above example, Inside the 4th line I assigned “fruit_1” to “fruit_2” to test whether they are “Identical” to each other if I’m using the “is” operator. It turns out it was. Because the “fruit_1” object has been reassigned to “fruit_2” as an object. Which they are now referring to the same object.
+
+Q/2,
+
+There's a correlation between objects, references, and aliasing. Referencing is the process of associating a variable with an object, and an object is simply what a variable refers to. When the value of one variable is assigned to another variable in Python, this is known as aliasing. Variables are names that act as references to values in the database.
+
+Example.Q/2,
+
+# input,1:
+x = ['lollipop', 7.24, 'Hey There!']
+y = [8, 'A0B1C2', 888]
+y = x #both refers to the same object
+y is x # these are the references to the same object 
+
+# output,1: # I will run a test of these program in the output section.
+==== RESTART: C:/Users/NurulIbrahim/Desktop/python/testing.discussion unit 6.py ===
+>>> x
+['lollipop', 7.24, 'Hey There!']
+>>> y
+['lollipop', 7.24, 'Hey There!']
+>>> 
+>>> y is x
+True
+>>> 
+>>> x [0]
+'lollipop'
+>>> y[0]
+'lollipop'
+>>> x[2]
+'Hey There!'
+>>> y[2]
+'Hey There!'
+EXPLANATIONS:
+
+Because the aliased object was changeable, any changes made to one alias had an effect on the other. As you can see, x has been swapped out for y, and the results are accurate. It doesn't matter if x and y are referring to the same string or not.
+
+ Q/3,
+
+I will create a function of a list and loops to match a list of classes to the available time slot. I will be creating a loop that runs once for each class, joins it with a time slot at the same index, and saves the schedule in a new list.
+
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+# input
+
+classes = ['English', 'Science', 'History', 'Swimming'] 
+times = ['8a.m', '10.30a.m', '12p.m', '2.30p.m']
+
+def schedule_classes(classes,times): 
+    schedule = [] 
+
+    index = 0 
+    while index < len(classes): 
+        scheduled_class = classes[index] +':'+ times[index] 
+        schedule.append(scheduled_class) 
+        index += 1
+    return schedule 
+
+schedule = schedule_classes (classes, times) 
+print( f"Monday's schedule: {schedule}") 
+
+# output
+*** Remote Interpreter Reinitialized ***
+Monday's schedule: ['English:8a.m', 'Science:10.30a.m', 'History:12p.m', 'Swimming:2.30p.m']
+>>>
+
+
+I've added descriptions for each of the functions listed above. Which as I can tell, it's overly packed and difficult to read. Here is the function's descriptions base on the line's number:
+
+Line 3  : creating a list of classes(variable) that I want my function to schedule
+
+Line 4 : creating a list of times that contains available time slots for the room where the classes can be held
+
+Line 6 : defining the schedule_classes as a function
+
+Line 7 : classes & time as parameters
+
+Line 9 : the function will return a list of scheduled classes by creating an empty list
+
+Line 10: scheduling each element of the classes list required a loop. I will start with a counter variable as an index and set it up to 0
+
+Line 11: using while loop, code a condition to run the loop as long as the index is less than the length of the classes list
+
+Line 12: Storing the new string in the variable then schedule the first class by joining the first element of classes & the first element of times
+
+Line 13: adding the scheduled class to the schedule list by using  .append
+
+Line 14: to schedule the next class with each iteration, increasing index by one after the scheduling code
+
+Line 16: creating the variable, call the function passing the parameters & then save the results in the schedule
+
+Line 17: to check the returned list by displaying the schedule inside an f-string
+
+ 
+
+Finally, as expected it's coded the function that uses a loop to match each index of classes and time to create a new list of schedule classes.
+
+
+
+Reference:
+
+Downey, A. (2015). Think Python: How to think like a computer scientist. This book is licensed under Creative Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)
+
+
+P/S : I also added a video tutorial on how to use Hilite.me for the Discussion post assignment for your great advantage.  Please do click the following link. 
+https://youtu.be/QqosFUvaKu4 
