@@ -1,3 +1,5 @@
+## Learning Journal Unit Week 6 ##
+
 ### Part 1
 string="Mark Sikaundi Chanda Mwila Mambwe Elija Samuel Katty Parity Ann Christabel Diana" #string with alot of words in it.
 
